@@ -1,0 +1,730 @@
+/* ESTILOS GENERALES */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+h2 {
+    margin: 20px 0;
+    text-align: center;
+    font-weight: 800;
+}
+
+.no-display {
+    display: none;
+}
+
+/* ANIMACION */
+
+.imagen-animada {
+    animation-name: imgNovedades;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+
+@keyframes imgNovedades {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/***********************************************************************************************/
+/* BARRA DE NAVEGACION */
+nav {
+    z-index: 9999;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    width: 200px;
+    margin-left: 20px;
+}
+
+.bar-btn {
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.bar-btn img {
+    width: 32px;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background-color: orangered;
+    opacity: 95%;
+    text-align: center;
+    transition: all .5s;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: white;
+    transition: .2s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.nav-menu {
+    height: 100vh;
+}
+
+#check:checked~.nav-menu li {
+    display: block;
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .logo {
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 10px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .nav-menu li a.active,
+    .nav-menu li a:hover {
+        color: orangered;
+        transition: .2s;
+    }
+}
+
+/***********************************************************************************************/
+/* PIE DE PAGINA */
+
+.pie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.data-fiscal {
+    height: 50px;
+    margin: 10px 0;
+}
+
+.pie-text {
+    margin: 10px 0;
+}
+
+.img-redes {
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .pie {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100px;
+        padding: 0;
+    }
+
+    .data-fiscal {
+        padding-left: 20px;
+    }
+
+    .social-bar {
+        padding-right: 20px;
+    }
+
+    .img-redes {
+        margin-top: 0px;
+
+    }
+}
+
+/***********************************************************************************************/
+/* SECCION NOVEDADES */
+
+.novedades {
+    height: 50vh;
+    width: 100%;
+    background-image: url(../images/rojo1000x800.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .novedades {
+        height: 70vh;
+        background-image: url(../images/rojo1600x800.png);
+    }
+}
+
+/***********************************************************************************************/
+/* PRODUCTOS DESTACADOS */
+.productos-destacados {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
+}
+
+.productos-card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+    justify-content: center;
+    text-align: center;
+    border: solid 4px rgb(230, 230, 230);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.card-transicion {
+    transition: all 0.4s;
+}
+
+.card-transicion:hover {
+    border: orangered solid 4px;
+}
+
+.img-card {
+    margin: 20px;
+}
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .productos-card {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 20px 0;
+    }
+
+    .card {
+        width: 400px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .productos-card {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 20px 0;
+    }
+
+    .card {
+        width: 400px;
+    }
+}
+
+/***********************************************************************************************/
+/* SECCION QUIENES SOMOS */
+
+.quienes-somos {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: orangered;
+    flex-direction: column;
+}
+
+.quienes-somos h1 {
+    text-align: center;
+    color: orangered;
+    margin: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.quienes-somos p {
+    text-align: center;
+    color: black;
+    margin: 20px;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.ubicacion h2 {
+    color: orangered;
+    font-weight: 500;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mapa p {
+    color: black;
+}
+
+.mapa div {
+    padding: 30px;
+}
+
+
+.mapa-iframe {
+    width: 90vw;
+    height: 50vh;
+}
+
+
+/* TABLET */
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .quienes-somos {
+        min-height: 20vh;
+    }
+
+    .ubicacion {
+        height: 100%;
+        min-height: 80vh;
+    }
+
+    .mapa div {
+        padding: 10px;
+    }
+
+    .mapa-iframe {
+        width: 80vw;
+        height: 450px;
+    }
+
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .quienes-somos {
+        min-height: 40vh;
+    }
+
+    .ubicacion {
+        height: 100%;
+        min-height: 60vh;
+        padding-bottom: 80px;
+    }
+
+    .mapa {
+        flex-direction: row;
+        margin: 20px;
+        text-align: left;
+    }
+
+    .mapa-iframe {
+        width: 50vw;
+        height: 450px;
+    }
+}
+
+/***********************************************************************************************/
+/* FORMULARIO DE CONTACTO */
+
+.contacto {
+    height: 100%;
+    padding: 40px 0;
+    flex-direction: column;
+}
+
+.contacto h1 {
+    text-align: center;
+    color: orangered;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 0 10px;
+    padding: 0 1vw;
+    justify-content: center;
+}
+
+.formulario p,
+.formulario h4,
+.formulario span {
+    text-align: center;
+    color: orangered;
+}
+
+.input-wide {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    color: black;
+    background-color: rgb(255, 230, 100);
+    border: 2px solid orangered;
+}
+
+div label {
+    color: black;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.form-campos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-datos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.form-consulta {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.form-consulta textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(255, 230, 100);
+    border: 2px solid orangered;
+    color: black;
+}
+
+.form-preferencias {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-preferencias select {
+    width: 80%;
+}
+
+.form-opciones {
+    width: 300px;
+    display: flex;
+    padding: 10px 0;
+    margin: 20px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-botones {
+    display: flex;
+    flex-direction: row nowrap;
+    padding: 10px;
+    justify-content: center;
+}
+
+.form-botones input {
+    margin: 0 10px;
+    background-color: #ff6741;
+    border: #ff3300 3px solid;
+    font-weight: 800;
+    color: white;
+    height: 40px;
+}
+
+.form-nombre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-nombre input {
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 230, 100);
+    border: 2px solid orangered;
+    padding: 0 10px;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {
+    .form-nombre {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-nombre input {
+        width: 49%;
+        margin-bottom: 0;
+    }
+
+    .form-preferencias {
+        flex-direction: row;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 1024px) {
+    .contacto {
+        height: 100%;
+        min-height: 80vh;
+        padding-top: 60px;
+    }
+
+    .formulario {
+        margin: 20px 50px 0 50px;
+        padding: 0 10vw;
+    }
+
+    .form-nombre {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-nombre input {
+        width: 49%;
+        margin-bottom: 0;
+    }
+
+    .form-campos {
+        flex-direction: row;
+        height: 300px;
+    }
+
+    .form-datos {
+        width: 50%;
+        margin: 0 5px;
+        justify-content: space-between;
+    }
+
+    .form-consulta {
+        width: 50%;
+        height: 100%;
+        margin: 0 5px;
+        padding-top: 0;
+    }
+
+    .form-preferencias {
+        flex-direction: row;
+    }
+}
+
+
+/***********************************************************************************************/
+/* SECCION PRODUCTOS */
+/* (Reutiliza clases de página de inicio) */
+
+.prod-compra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-compra {
+    border: 3px solid rgb(255, 130, 80);
+    padding: 10px 15px;
+    background-color: orangered;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.btn-compra:hover {
+    background-color: rgb(220, 45, 0);
+    color: #ffffff;
+}
+
+.precio {
+    padding: 15px 15px 0 15px;
+    font-weight: 600;
+    font-size: 25px;
+    font-style: italic;
+    color: orangered;
+}
+
+
+
+/***********************************************************************************************/
+/* PREGUNTAS FRECUENTES */
+/* (MAYORMENTE BOOTSTRAP) */
+
+.faq {
+    height: 100%;
+    min-height: 80vh;
+    padding-bottom: 100px;
+    padding: 20px 0;
+}
+
+.faq h1 {
+    text-align: center;
+    color: orangered;
+    margin: 20px;
+}
+
+.preguntas {
+    background-color: rgb(255, 230, 100);
+    color: black;
+}
+
+.accordion {
+    margin-bottom: 30px;
+}
+
+.accordion-body a,
+.accordion-body a:visited {
+    color: black;
+    font-weight: 500;
+}
+
+
+.accordion-button {
+    font-weight: 600;
+    color: orangered;
+    background-color: rgb(255, 230, 100)
+}
+
+.accordion-button:hover {
+    color: white;
+    background-color: orangered
+}
+
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: orangered;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-extra {
+    padding: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.faq-extra p {
+    padding: 0 10px;
+}
+
+.faq-extra p a {
+    color: orangered;
+}

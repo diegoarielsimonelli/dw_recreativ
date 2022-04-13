@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECREATIV - Formulario de Contacto</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- SEO -->
+    <meta name="description" content="Formulario de contacto para que puedas realizarnos la/s consulta/s que quieras">
+    <meta name="keywords"
+        content="comics, juegos de mesa, juegos de rol, merchandising, manga, argentina, figuras, dados">
+    <!-- Open Graph -->
+    <meta property="og:title" content="RECREATIV - Formulario de Contactos">
+    <meta property="og:description"
+        content="Formulario de contacto para que puedas realizarnos la/s consulta/s que quieras">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:site_name" content="RECREATIV - Tu tienda favorita">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="../../index.html"><img src="../images/logo.png" alt="RECREATIV" class="logo"></a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <img src="../images/burger.svg" alt="menu">
+            </label>
+            <ul class="nav-menu">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a class="active" href="#">Contacto</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Formulario de Contacto -->
+
+        <section class="contacto">
+            <h1>Contacto</h1>
+            <form action="" class="formulario">
+                <div class="form-campos">
+                    <div class="form-datos">
+                        <label for="">Nombre Completo: </label>
+                        <div class="form-nombre">
+                            <input type="text" placeholder="Nombre">
+                            <input type="text" placeholder="Apellido">
+                        </div>
+                        <label for="">Email: </label>
+                        <input class="input-wide" type="email" placeholder="Correo Electrónico">
+                        <label for="">WhatsApp: </label>
+                        <input class="input-wide" type="text" placeholder="Ej: 11 9999-9999">
+                    </div>
+                    <div class="form-consulta">
+                        <label for="">Su consulta: </label>
+                        <textarea name="" id="" cols="30" rows="10"
+                            placeholder="Ingrese aquí su consulta..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-preferencias">
+                    <h4>Horario de contacto:</h4>
+                    <div class="form-opciones">
+                        <select name="horario">
+                            <option value="mañaña">8 a 12 hs</option>
+                            <option value="mediatarde">12 a 16 hs</option>
+                            <option value="tarde">16 a 20 hs</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <span>Quiero suscribirme al newsletter. </span>
+                    <input class="checkbox" type="checkbox" name="acepta" value="1">
+                </div>
+                <div class="form-botones">
+                    <input type="reset" value="LIMPIAR FORMULARIO">
+                    <input type="submit" value="ENVIAR">
+                    <br>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div><a href="https://www.afip.gob.ar/" target="_blank"><img class="data-fiscal" src="../images/df-falso.jpg"
+                    alt="data fiscal"></a></div>
+        <div class="pie-text">Copyright &copy; 2022 - RECREATIV Tu tienda favorita <br> Desarrollado por Gonzalo
+            Domínguez</div>
+        <div class="social-bar">
+            <a href="https://www.facebook.com/" target="_blank"><img class="img-redes" src="../images/social-fb.png"
+                    alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img class="img-redes" src="../images/social-ig.png"
+                    alt="instagram"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img class="img-redes" src="../images/social-in.png"
+                    alt="linkedin"></a>
+            <a href="https://twitter.com/" target="_blank"><img class="img-redes" src="../images/social-tw.png"
+                    alt="twitter"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
